@@ -1,0 +1,76 @@
+body{
+    background-color: rgb(26, 214, 231);
+}
+
+img{
+    height: 500x;
+    width: 500px;
+}
+
+#speed{
+    border: 10px solid:black;
+    border: radius 50%;
+}
+
+#div1{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    padding:100px;
+    background-color: rgb(15, 0, 0);
+    border: 1px solid black;
+    border-radius:50%
+    ;
+}
+#div2{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    padding:100px;
+    background-color: rgb(1, 16, 1);
+    border: 1px solid black;
+    border-radius:50%;
+}
+#div3{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(1, 1, 23);
+    border: 1px solid black;
+    padding: 100px;
+    margin: 10px;
+    border-radius:50%;
+}
+#div1:hover{
+    background-color: red;
+    box-shadow: 125px 125px 75px red;
+}
+#div2:hover{
+     background-color: yellow;
+    box-shadow: 125px 125px 75px yellow;
+}
+#div3:hover{
+    background-color: green;
+    box-shadow: 125px 125px 75px green;
+}
+
+form{
+    width: 350px;
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    gap:50px;
+    background-color: rgb(245, 45, 91);
+    backdrop-filter: blur(10px);
+}
+input{
+    width: 250px;
+    height: 40px;
+    box-sizing:border-box;
+    transition: 0.3s ease;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 10px;
+}

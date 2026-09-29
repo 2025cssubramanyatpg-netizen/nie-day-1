@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vote Validator</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: Arial, sans-serif;
+
+            /* Voting booth background image */
+            background-image: url("voting-bg.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Dark/light overlay */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.25);
+            z-index: 0;
+        }
+
+        /* Main form */
+        .box {
+            position: relative;
+            z-index: 1;
+
+            width: 420px;
+            padding: 40px;
+
+            text-align: center;
+
+            background: rgba(255, 255, 255, 0.88);
+
+            border-radius: 20px;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+            backdrop-filter: blur(5px);
+        }
+
+        h1 {
+            color: #123b75;
+            margin-bottom: 30px;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+
+            margin-bottom: 15px;
+
+            border: 1px solid #bbb;
+            border-radius: 8px;
+
+            font-size: 16px;
+        }
+
+        input:focus {
+            outline: none;
+            border: 2px solid #1769d1;
+        }
+
+        button {
+            padding: 13px 40px;
+
+            border: none;
+            border-radius: 8px;
+
+            background: #1769d1;
+            color: white;
+
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0d4fa8;
+        }
+
+        #Answer {
+            margin-top: 20px;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Vote Validator</h1>
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Enter your name">
+
+        <input
+            type="number"
+            id="age"
+            placeholder="Enter your age">
+
+        <input
+            type="text"
+            id="nationality"
+            placeholder="Enter your nationality">
+
+        <button onclick="vote()">Submit</button>
+
+        <p id="Answer">
+            Here you will see the validation result.
+        </p>
+
+    </div>
+
+
+    <script>
+
+        function vote() {
+
+            var name = document.getElementById("name").value;
+            var age = document.getElementById("age").value;
+            var nationality =
+                document.getElementById("nationality").value;
+
+            var Answer =
+                document.getElementById("Answer");
+
+
+            if (
+                age >= 18 &&
+                nationality.toLowerCase() === "indian"
+            ) {
+
+                Answer.innerHTML =
+                    name + " is eligible to vote.";
+
+            } else {
+
+                Answer.innerHTML =
+                    name + " is not eligible to vote.";
+
+            }
+        }
+
+    </script>
+
+</body>
+</html> 
